@@ -4,6 +4,9 @@ This branch has Rocky Linux 9 specific kickstarts. These kickstarts vary
 between cloud images and live images provided in our repositories and
 mirrors.
 
+If you are looking for the kiwi version of these configurations, check
+out [this repo](https://git.resf.org/sig_core/rocky-kiwi-descriptions/src/branch/r9).
+
 ## Structure
 
 In the root of the repository are the general kickstarts in use that any
