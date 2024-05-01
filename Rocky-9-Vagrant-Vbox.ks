@@ -104,7 +104,7 @@ sed -i 's/^#baseurl/baseurl/g;s/^mirrorlist/#mirrorlist/g' /etc/yum.repos.d/rock
 dnf -y install kernel-headers-$kver kernel-devel gcc make perl elfutils-libelf-devel
 sed -i 's/^baseurl/#baseurl/g;s/^#mirrorlist/mirrorlist/g' /etc/yum.repos.d/rocky*repo
 echo "pub/rocky" > /etc/dnf/vars/contentdir
-curl -L -o /tmp/vboxadditions.iso https://download.virtualbox.org/virtualbox/6.1.40/VBoxGuestAdditions_6.1.40.iso
+curl -L -o /tmp/vboxadditions.iso https://download.virtualbox.org/virtualbox/7.0.16/VBoxGuestAdditions_7.0.16.iso
 mkdir -p /media/VBoxGuestAdditions
 mount -o loop,ro /tmp/vboxadditions.iso /media/VBoxGuestAdditions
 mkdir -p /tmp/VBoxGuestAdditions
