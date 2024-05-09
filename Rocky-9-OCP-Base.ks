@@ -437,7 +437,7 @@ true
 
 %end
 
-%packages
+%packages --ignoremissing
 @core
 NetworkManager
 chrony
