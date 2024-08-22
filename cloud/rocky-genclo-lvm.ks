@@ -2,7 +2,7 @@
 %include rocky-cloud-parts-lvm.ks
 %include rocky-cloud-base-packages.ks
 
-bootloader --append="console=ttyS0,115200n8 no_timer_check crashkernel=auto net.ifnames=0" --location=mbr --timeout=1
+bootloader --append="console=ttyS0,115200n8 no_timer_check crashkernel=1G-4G:192M,4G-64G:256M,64G-:512M net.ifnames=0" --location=mbr --timeout=1
 
 %post --erroronfail
 passwd -d root

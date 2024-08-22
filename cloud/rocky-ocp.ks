@@ -7,7 +7,7 @@ repo --name "extras" --baseurl=http://dl.rockylinux.org/stg/rocky/9/extras/$base
 repo --name="oraclelinux-addons" --baseurl=http://yum.oracle.com/repo/OracleLinux/OL9/addons/$basearch/ --excludepkgs="kernel,WALinuxAgent" --install
 repo --name=epel --cost=200 --baseurl=https://dl.fedoraproject.org/pub/epel/9/Everything/$basearch/ --install
 
-bootloader --append="console=ttyS0,115200n8 console=tty0 no_timer_check crashkernel=auto net.ifnames=0 LANG=en_US.UTF-8 transparent_hugepage=never rd.luks=0 rd.md=0 rd.dm=0 rd.lvm.vg=rocky rd.lvm.lv=rocky/root rd.net.timeout.dhcp=10" --location=mbr --timeout=1 --boot-drive=vda
+bootloader --append="console=ttyS0,115200n8 console=tty0 no_timer_check crashkernel=1G-4G:192M,4G-64G:256M,64G-:512M net.ifnames=0 LANG=en_US.UTF-8 transparent_hugepage=never rd.luks=0 rd.md=0 rd.dm=0 rd.lvm.vg=rocky rd.lvm.lv=rocky/root rd.net.timeout.dhcp=10" --location=mbr --timeout=1 --boot-drive=vda
 
 %post --erroronfail
 
